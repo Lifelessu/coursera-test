@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../angular.min.js"></script>
+    <script src="app.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app="NameCalculator">
+    <!--<div ng-controller="NameCalcController">
+       <input type="text" name="" id="" ng-model="name"
+       ng-keyup="displayNumeric();">
+        
+        <div>
+            <p>Total Numeric Value is: {{totalValue}}</p>
+        </div>
+    </div>-->
+    
+    <div ng-controller="CalcController">
+        <input type="text" name="" id="" ng-model = "num1" ng-keyup="displaySum()">
+        <input type="text" name="" id="" ng-model = "num2" ng-keyup="displaySum()">
+        <p>Result: {{sum}}</p>
+    </div>
+</body>
+</html>
