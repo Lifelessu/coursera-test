@@ -17,12 +17,13 @@ function assignmentController($scope)
     $scope.foodCount = function()
     {
 
-        if($scope.foodEntered.length == 0)
+        if($scope.foodEntered.length === 0)
         {
             $scope.message = "Empty";
         }
         
         let foodItems = $scope.foodEntered.split(",").length;
+        let food = $scope.foodEntered.length;
         let checkSpace = $scope.checkSpace = /\s/.test($scope.foodEntered);
         
         if(foodItems>3)
@@ -30,7 +31,12 @@ function assignmentController($scope)
             $scope.message = "Its too much";
         }
 
-        else if(foodItems==3 ||foodItems<3 || foodItems>=1) 
+        else if(foodItems==3 ||foodItems==2) 
+        {
+            $scope.message = "Enjoy your food";
+        }
+
+        else if(food==1)
         {
             $scope.message = "Enjoy your food";
         }
