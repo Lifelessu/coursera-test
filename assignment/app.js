@@ -30,7 +30,7 @@ function assignmentController($scope)
             $scope.message = "Its too much";
         }
 
-        else if(foodItems==3||foodItems<3 && foodItems>1) 
+        else if(foodItems==3||foodItems<3 && foodItems>=1) 
         {
             $scope.message = "Enjoy your food";
         }
