@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="PracticeTool">
+<html lang="en" ng-app="Review">
 <head>
     <meta charset="UTF-8">
     <script src="../angular.min.js"></script>
-    <script src="filter.js"></script>
+    <script src="addNumber.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <!--<div ng-controller="PracticeController">
+    <div ng-controller="ReviewController">
         <input type="text" name="" id="" ng-model="num1" >
         <input type="text" name="" id="" ng-model="num2" >
-        <button ng-click="display();">CLICK</button>
-        <h2>Result: {{total}}</h2>
-    </div>-->
-    
-    <h2>Filter Controller</h2>
-    <div ng-controller="filterController">
-        <input type="text" name="" id="" ng-model="name" ng-blur="displayName()">
-        
+        <input type="text" name="" id="" ng-model="name">
+
+        <h1>{{name}}</h1>
+        <button ng-click="Increment()">click me</button>
+        <h1>{{counter}}</h1>
+        <h1>{{sum}}</h1>
     </div>
+   
 </body>
 </html>

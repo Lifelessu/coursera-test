@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Directive">
+<head>
+    <meta charset="UTF-8">
+    <script src="../angular.min.js"></script>
+    <script src="directive.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div ng-controller="DirectiveController">
+        <h1>{{country.name}}</h1>
+        <img ng-src="{{country.url}}" alt="{{country.name}}">
+
+        <input type="text" name="" id="" ng-model="Example">
+        <h1>{{Example}}</h1>
+        <input type="text" name="" id="" ng-model="Example">
+        <td>country.name</td>
+
+        <h1>===============================================</h1>
+        First Name:
+        <input type="text" name="" id="" ng-model="person.firstName"><br>
+        Middle Name:
+        <input type="text" name="" id="" ng-model="person.middleName"><br>
+        Last Name:
+        <input type="text" name="" id="" ng-model="person.lastName">
+
+        <table style="margin-top:25px;">
+            <tr>
+                <th>First Name</th>
+            
+                <th>Middle Name</th>
+          
+                <th>Last Name</th>
+            </tr>
+            <tbody>
+                <tr ng-repeat="person in persons">
+                    <td>{{person.firstName}}</td>
+                    <td>{{person.middleName}}</td>
+                    <td>{{person.lastName}}</td>
+                </tr>
+            </tbody>
+
+           
+        </table>
+
+    </div>
+    
+</body>
+</html>

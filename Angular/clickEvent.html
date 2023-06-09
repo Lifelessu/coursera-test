@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="clickEvent">
+<head>
+    <meta charset="UTF-8">
+    <script src="../angular.min.js"></script>
+    <script src="clickEvent.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Event</title>
+</head>
+<body>
+    <input type="number" step="1" min="0" max="5" ng-model="rowLimit">
+
+    <div ng-controller="clickEventCtrl">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Likes</th>
+                    <th>Dislikes</th>
+                    <th>Likes/Dislikes</th>
+                </tr>
+            </thead>
+
+            <tr ng-repeat="programming in programmings | limitTo:rowLimit">
+                <td>{{programming.name|uppercase}}</td>
+                <td>{{programming.likes}}</td>
+                <td>{{programming.dislikes}}</td>
+                <td>
+                    <input type="button" value="IncrementLikes" ng-click="IncrementLikes(programming)">
+                    <input type="button" value="Increment" ng-click="IncrementDislikes(programming)">
+                </td>
+                
+            </tr>
+        </table>
+    </div>
+    
+</body>
+</html>
